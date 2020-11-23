@@ -1,13 +1,3 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  HISN website 2020
-</h1>
-
 ## New website for HISN
 The [current website](http://hisn.deaf.org.hk/) is considered outdated as its unresponsive layout cannot ensure a pleasure browsing experience on smartphones and tablets. Also, there is no CMS to allow the admin to easily update the content. The new website aimed at solving these two issues by levaraging new technologies which inludes GatsbyJS, Netlify and Contentful. 
 
