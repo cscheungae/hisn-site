@@ -9,7 +9,7 @@ Contentful | a headless cms for managing the content in the website. Any updates
 
 Upon successfull rebuild and deployment, admin could received a successful message in his/ her email. This feature is processed by Zapier.
 
-# [Demo/ updated website](https://hisn.netlify.app/)
+# [Demo of the updated website](https://hisn.netlify.app/)
 
 # Run the app
 ```
