@@ -1,0 +1,91 @@
+@import "../styles/variables.scss";
+
+.anniversary-section {
+  h1 {
+    text-align: center;
+    color: #111;
+    margin-top: 0;
+    padding-top: 1em;
+  }
+
+  .anniversary-cards-container {
+    .anniversary-card {
+      display: flex;
+      flex-direction: column;
+
+      $paddingText: 1em;
+      background-color: rgba($color: #333, $alpha: 0.04);
+      border-radius: 10px;
+      border: 1px solid rgba($color: #333, $alpha: 0.2);
+      box-shadow: 5px 5px 20px rgba($color: #333, $alpha: 0.2),
+        -5px -5px 6px rgba($color: $hisnOrange, $alpha: 0.2),
+        3px -5px 6px rgba($color: $green, $alpha: 0.1);
+
+      .anniversary-card-content {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+          font-size: 2rem;
+          color: $purple;
+          font-weight: bolder;
+          text-align: center;
+          text-shadow: 3px -3px rgba($hisnOrange, 0.8),
+            5px -5px rgba($green, 0.9);
+          padding: 0 $paddingText;
+          font-style: italic;
+        }
+
+        h4 {
+          text-align: right;
+          margin-right: 2vw;
+          color: rgba(#111, 0.7);
+          margin-bottom: 0;
+        }
+
+        p {
+          line-height: 1.8;
+          padding: 0 $paddingText;
+        }
+
+        .media-button-row {
+          display: flex;
+          justify-content: space-evenly;
+
+          a {
+            text-decoration: overline underline;
+            text-transform: uppercase;
+            color: initial;
+            display: inline-block;
+            padding: 1.5em;
+            font-style: italic;
+          }
+        }
+      }
+    }
+
+    & ~ .anniversary-cards-container {
+      margin-top: 4vh;
+    }
+  }
+}
+
+@media (min-width: $breakpointRight + 1px) {
+  .anniversary-section {
+    .anniversary-cards-container {
+      .anniversary-card {
+        flex-direction: row;
+
+        .anniversary-card-content {
+          .media-button-row {
+            margin-top: auto;
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+    .contacts {
+      padding-top: 0;
+    }
+  }
+}

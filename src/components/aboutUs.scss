@@ -1,0 +1,78 @@
+@import "../styles/variables.scss";
+
+.aboutUs {
+  .container {
+    h1,
+    h2,
+    h3 {
+      text-align: center;
+    }
+
+    h1 {
+      @include setBorderHeading($hisnOrange);
+    }
+
+    h2 {
+      margin: 2em auto 1.2em;
+    }
+
+    q.slogan {
+      color: darken($hisnOrange, 10%);
+      display: block;
+      text-align: center;
+      font-style: italic;
+      font-weight: bold;
+      quotes: "“" "”" "‘" "’";
+
+      &::before {
+        content: open-quote;
+      }
+
+      &::after {
+        content: close-quote;
+      }
+    }
+
+    ul {
+      text-align: center;
+      margin-top: 2em;
+      padding: 0 2em;
+      line-height: 1.3;
+
+      li ~ li {
+        margin-top: 1.5em;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpointRight + 1px) {
+  .aboutUs {
+    .container {
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 100px;
+
+        li {
+          max-width: 205px;
+          padding: 0;
+        }
+
+        li ~ li {
+          margin-top: 0;
+          //   border-left: 1px solid rgba(10, 10, 10, 0.2);
+        }
+
+        .divider {
+          width: 2px;
+          background-color: rgba(10, 10, 10, 0.15);
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+}

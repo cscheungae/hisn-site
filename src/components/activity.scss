@@ -1,0 +1,128 @@
+@import "../styles/variables.scss";
+
+.activity {
+  margin: 3em 0 0;
+  padding: 2em 0 0;
+  $lightHisnOrange: lighten($hisnOrange, 10%);
+  background: linear-gradient(
+    45deg,
+    $hisnOrange 0%,
+    $lightHisnOrange 50%,
+    $hisnOrange 100%
+  );
+
+  h4 {
+    text-align: center;
+  }
+
+  .container {
+    h1 {
+      text-align: center;
+    }
+
+    .eventList {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-evenly;
+
+      .event {
+        background-color: #fff;
+        padding: 0.5em 1.5em 1em;
+        position: relative;
+        border-radius: 15px;
+        border-left: 10px solid $purple;
+        box-shadow: 3px 3px 10px $purple;
+        margin: 1em;
+        min-width: 100%;
+
+        .date {
+          display: flex;
+          flex-direction: row;
+          justify-self: flex-start;
+          align-items: center;
+
+          .clock {
+            margin-right: 0.5em;
+          }
+        }
+
+        .btnRow {
+          margin-top: 2em;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+
+          a {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            margin: 0.1em 0;
+            padding: 0.3em 1.2em;
+            background-color: $purple;
+            border-radius: 20px;
+            transition: all 300ms ease-out;
+
+            & ~ a {
+              margin-left: 1em;
+            }
+
+            &:hover {
+              background-color: lighten($color: $purple, $amount: 15%);
+            }
+
+            &[disabled] {
+              background-color: lighten($color: #555, $amount: 35%);
+              cursor: default;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
+    div.btn-more-row {
+      text-align: center;
+      a.btn-more {
+        background-color: #fff;
+        border-radius: 20px;
+        display: inline-block;
+        padding: 0.5em 1em;
+        text-decoration: none;
+        color: #111;
+        transition: all 300ms ease-out;
+
+        &:hover {
+          background-color: $purple;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+@import "./joinUs.scss";
+
+@media (min-width: $breakpointRight + 1px) {
+  .activity {
+    position: relative;
+    padding-bottom: calc(#{$heightJoinUs} / 2);
+  }
+}
+
+@media (min-width: $breakpointRight + 260px) {
+  .activity {
+    position: relative;
+    padding-bottom: calc(#{$heightJoinUs} / 2);
+
+    .container {
+      .eventList {
+        .event {
+          min-width: auto;
+          max-width: 450px;
+        }
+      }
+    }
+  }
+}

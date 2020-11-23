@@ -1,0 +1,100 @@
+@import "../styles/variables.scss";
+
+/*
+ * Mobile view
+ *
+ */
+
+.header {
+  padding: 0.5em 0;
+
+  .logoBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .desktopNav {
+      display: none;
+    }
+  }
+
+  .mobileNav {
+    display: none;
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+
+      a {
+        color: #444;
+        text-decoration: none;
+
+        &:active {
+          color: darken($color: #444, $amount: 60%);
+
+          li {
+            background-color: lighten($hisnOrange, 20%);
+          }
+        }
+
+        li {
+          text-align: center;
+          padding: 0.5em 0;
+        }
+      }
+    }
+  }
+}
+
+/*
+ * Desktop view
+ *
+ */
+
+@media (min-width: $breakpointRight + 1px) {
+  .header {
+    display: flex;
+
+    .container {
+      .hamburgerMenu {
+        display: none;
+      }
+
+      .desktopNav {
+        display: block;
+
+        ul {
+          display: flex;
+          list-style-type: none;
+          padding: 0;
+
+          a {
+            margin: 0 0.2ems;
+            padding: 0 1em;
+            color: #444;
+            text-decoration: none;
+
+            &:active {
+              color: darken($color: #444, $amount: 60%);
+              // text-shadow: 1px 1px #111;
+            }
+
+            &:hover {
+              color: darken($hisnOrange, $amount: 10%);
+            }
+
+            li {
+              text-align: center;
+              padding: 0.5em 0;
+            }
+          }
+        }
+      }
+    }
+
+    .mobileNav {
+      display: none !important;
+    }
+  }
+}

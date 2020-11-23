@@ -1,0 +1,61 @@
+@import "../styles/variables.scss";
+
+$duration: 300ms;
+
+.hamburgerMenu {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  div.bar {
+    position: relative;
+    width: 1.55rem;
+    height: 3px;
+    background-color: $hisnOrange;
+    border-radius: 2px;
+    transition: all $duration ease-in-out;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1.55rem;
+      height: 3px;
+      background-color: $hisnOrange;
+      border-radius: 10px;
+      right: 0;
+      transition: all $duration ease-in-out;
+    }
+
+    &::before {
+      transform: translateY(-8px);
+    }
+
+    &::after {
+      transform: translateY(8px);
+    }
+  }
+
+  /*
+   * Animation
+   */
+
+  &.open {
+    div.bar {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(-45deg) translateY(0.01rem);
+      }
+
+      &::after {
+        transform: rotate(45deg) translateY(-0.01rem);
+      }
+    }
+  }
+}

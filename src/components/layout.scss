@@ -1,0 +1,20 @@
+/*
+ *  Baae Styles:
+ *  Reset all the unwanted styles
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+* {
+  font-family: "Noto Sans HK", sans-serif;
+}

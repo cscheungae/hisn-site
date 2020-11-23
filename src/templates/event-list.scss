@@ -1,0 +1,52 @@
+@import "../styles/variables.scss";
+
+.activity-override {
+  margin-top: 0;
+  padding-bottom: 1.5em;
+
+  .btnRow {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a.btn {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      margin: 0.1em 0;
+      padding: 0.3em 1.2em;
+      background-color: $purple;
+      border-radius: 20px;
+      transition: all 300ms ease-out;
+
+      & ~ a {
+        margin-left: 1em;
+      }
+
+      &:hover {
+        background-color: lighten($color: $purple, $amount: 15%);
+      }
+
+      &[disabled] {
+        background-color: lighten($color: #555, $amount: 35%);
+        cursor: default;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpointRight + 1px) {
+  .activity-override {
+    position: relative;
+    padding-bottom: 3.5%;
+  }
+
+  .eventsPage {
+    .contacts {
+      padding-top: 0;
+    }
+  }
+}

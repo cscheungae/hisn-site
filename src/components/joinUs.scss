@@ -1,0 +1,72 @@
+@import "../styles//variables.scss";
+
+.joinUs {
+  background-color: $purple;
+  margin-top: 3em;
+  padding: 0.5em 3em 2em;
+  color: #fff;
+  .container {
+    line-height: 1.5;
+
+    h1 {
+      font-size: 2.5em;
+      font-weight: 300;
+    }
+
+    h4 {
+      text-align: left;
+    }
+
+    .center {
+      margin: 2em 0 1em;
+      text-align: center;
+      a.downloadLink {
+        display: inline-block;
+        text-decoration: none;
+        color: #111;
+        background-color: $hisnOrange;
+        padding: 0.5em 1em;
+        border-radius: 20px;
+        transition: all 400ms ease-out;
+
+        .flex {
+          display: flex;
+        }
+
+        &:hover {
+          transform: scale(1.1);
+          background-color: lighten($color: $hisnOrange, $amount: 15%);
+        }
+      }
+    }
+    a.link {
+      color: $hisnOrange;
+    }
+  }
+}
+
+@media (min-width: $breakpointRight + 1px) {
+  .joinUs {
+    position: absolute;
+    bottom: -330px;
+    --widthA: calc(100vw - #{$widthJoinUs});
+    left: calc(var(--widthA) / 2);
+    width: $widthJoinUs;
+    height: $heightJoinUs;
+    border-radius: 20px;
+    .container {
+      width: 100%;
+      padding: 0 2em;
+
+      .flex {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        p {
+          max-width: 350px;
+        }
+      }
+    }
+  }
+}

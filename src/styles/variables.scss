@@ -1,0 +1,42 @@
+/*
+ * Breakpoints
+ * 
+ *From the perspective of the middle screen
+ * <---------(599)><(600)-----------(999)><(1000)------------->
+ */
+$breakpointLeft: 600px;
+$breakpointRight: 999px;
+
+/*
+ * LogoBar styles
+ */
+
+$hisnOrange: #ffaa2b;
+$purple: #7d387d;
+$green: #9dd9d2;
+
+/*
+ * Header Height styles
+ */
+
+$headerHeight_sm: 69.35px;
+$headerHeight_lg: 82.4px;
+
+/*
+ * Shared H1 border and font properties
+ *
+ */
+
+@mixin setBorderHeading($color) {
+  margin: 2em auto 1.2em;
+  padding: 15px 0;
+  border: 3px solid $color;
+}
+
+/*
+ * Height of the join us sheet
+ *
+ */
+
+$heightJoinUs: 550px;
+$widthJoinUs: 900px;

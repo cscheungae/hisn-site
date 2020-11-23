@@ -1,0 +1,24 @@
+/*
+ *  Container Styles:
+ *  
+ */
+
+@import "../styles/variables.scss";
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media (min-width: $breakpointLeft) and (max-width: $breakpointRight) {
+  .container {
+    width: 80%;
+  }
+}
+
+@media (min-width: $breakpointRight + 1px) {
+  .container {
+    width: 75%;
+    max-width: 1170px;
+  }
+}
