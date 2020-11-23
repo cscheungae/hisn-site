@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2742f2d3-b293-4c1b-84d4-352747352208/deploy-status)](https://app.netlify.com/sites/hisn2020/deploys)
-
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.org">
@@ -21,7 +19,7 @@ Contentful | a headless cms for managing the content in the website. Any updates
 
 Upon successfull rebuild and deployment, admin could received a successful message in his/ her email. This feature is processed by Zapier.
 
-# [Demo](https://hisn.netlify.app/)
+# [Demo](https://hisn.deaf.org.hk/)
 
 # Run the app
 ```
