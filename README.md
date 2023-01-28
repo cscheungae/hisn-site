@@ -1,5 +1,5 @@
-## New website for HISN
-The [old website](http://hisn.deaf.org.hk/) is considered outdated as its unresponsive layout cannot ensure a pleasure browsing experience on smartphones and tablets. Also, there is no CMS to allow the admin to easily update the content. The new website aimed at solving these two issues by levaraging new technologies which inludes GatsbyJS, Netlify and Contentful. 
+## [New website for HISN](https://hisn.netlify.app/)
+The old website is considered outdated as its unresponsive layout cannot ensure a pleasure browsing experience on smartphones and tablets. Also, there is no CMS to allow the admin to easily update the content. The new website aimed at solving these two issues by levaraging new technologies which inludes GatsbyJS, Netlify and Contentful. 
 
 Tech  | Functions
 --- | ---
